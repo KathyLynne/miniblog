@@ -1,0 +1,491 @@
+/*------------------------------------------------
+ * SUSY Default Setup
+ *----------------------------------------------*/
+@import url(http://fonts.googleapis.com/css?family=Lato:400,600,700,800);
+/* line 21, D:/Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/language/susy/_box-sizing.scss */
+*, *:before, *:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/*------------------------------------------------
+ * COLORS
+ *----------------------------------------------*/
+/*------------------------------------------------
+ * FONTS
+ *----------------------------------------------*/
+/*------------------------------------------------
+ * OTHER Variables.
+ *----------------------------------------------*/
+/*------------------------------------------------
+ * UTILITIES MIXINS & CLASSES
+ *----------------------------------------------*/
+/*------------------------------------------------
+ * Typography
+ *----------------------------------------------*/
+/*------------------------------------------------
+ * Layout
+ *----------------------------------------------*/
+/** -- mobile first base layout-- **/
+/*****************************************************
+    Multi Screen Font-sizing
+******************************************************/
+/* line 7, ../sass/base.scss */
+body {
+  font-size: 100%;
+  margin: 0;
+}
+
+/* line 12, ../sass/base.scss */
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+
+/* line 15, ../sass/base.scss */
+p {
+  font-size: 1em;
+  /* equivalent to 16px */
+  line-height: 1.25;
+  /* equivalent to 20px */
+}
+@media (min-width: 600px) {
+  /* line 15, ../sass/base.scss */
+  p {
+    font-size: 1em;
+    /* equivalent to 16px */
+    line-height: 1.375;
+    /* equivalent to 22px */
+  }
+}
+
+/* line 23, ../sass/base.scss */
+h1 {
+  font-size: 2em;
+  /* 2x body copy size = 32px */
+  line-height: 1.25;
+  /* 45px / 36px */
+}
+@media (min-width: 600px) {
+  /* line 23, ../sass/base.scss */
+  h1 {
+    font-size: 2.5em;
+    /* 2.5x body copy size = 40px */
+    line-height: 1.125;
+  }
+}
+@media (min-width: 900px) {
+  /* line 23, ../sass/base.scss */
+  h1 {
+    font-size: 3em;
+    /* 3x body copy size = 48px */
+    line-height: 1.05;
+    /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+  }
+}
+
+/* line 35, ../sass/base.scss */
+h2 {
+  font-size: 1.625em;
+  /* 1.625x body copy size = 26px */
+  line-height: 1.15384615;
+  /* 30px / 26px */
+}
+@media (min-width: 600px) {
+  /* line 35, ../sass/base.scss */
+  h2 {
+    font-size: 2em;
+    /* 2x body copy size = 32px */
+    line-height: 1.25;
+  }
+}
+@media (min-width: 900px) {
+  /* line 35, ../sass/base.scss */
+  h2 {
+    font-size: 2.25em;
+    /* 2.25x body copy size = 36px */
+    line-height: 1.25;
+  }
+}
+
+/* line 47, ../sass/base.scss */
+h3 {
+  font-size: 1.375em;
+  /* 1.375x body copy size = 22px */
+  line-height: 1.13636364;
+  /* 25px / 22px */
+}
+@media (min-width: 600px) {
+  /* line 47, ../sass/base.scss */
+  h3 {
+    font-size: 1.5em;
+    /* 1.5x body copy size = 24px */
+    line-height: 1.25;
+  }
+}
+@media (min-width: 900px) {
+  /* line 47, ../sass/base.scss */
+  h3 {
+    font-size: 1.75em;
+    /* 1.75x body copy size = 28px */
+    line-height: 1.25;
+  }
+}
+
+/* line 59, ../sass/base.scss */
+h4 {
+  font-size: 1.125em;
+  /* 1.125x body copy size = 18px */
+  line-height: 1.11111111;
+}
+@media (min-width: 600px) {
+  /* line 59, ../sass/base.scss */
+  h4 {
+    line-height: 1.22222222;
+    /* (22px / 18px */
+  }
+}
+
+/* line 66, ../sass/base.scss */
+blockquote {
+  font-size: 1.25em;
+  /* 20px / 16px */
+  line-height: 1.25;
+  /* 25px / 20px */
+}
+@media (min-width: 600px) {
+  /* line 66, ../sass/base.scss */
+  blockquote {
+    font-size: 1.5em;
+    /* 24px / 16px = */
+    line-height: 1.45833333;
+    /* 35px / 24px */
+  }
+}
+
+/*********************************************************************
+    General Templating Sets, Header Footer, Main Content Outer Format
+*********************************************************************/
+/* line 79, ../sass/base.scss */
+.nav ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+/* line 80, ../sass/base.scss */
+a {
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/* line 85, ../sass/base.scss */
+body {
+  /*****************************************************
+   Nav- Main-Menu / Header
+  ******************************************************/
+}
+/* line 89, ../sass/base.scss */
+body > header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 48px;
+  background-color: transparent;
+  background-color: rgba(250, 250, 250, 0.9);
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: white;
+}
+/* line 12, D:/Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+body > header:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 100, ../sass/base.scss */
+body > header a {
+  color: #4D243D;
+  padding-top: 12px;
+  font-size: 16px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+@media (min-width: 900px) {
+  /* line 100, ../sass/base.scss */
+  body > header a {
+    padding-top: 4px;
+    font-size: 32px;
+  }
+}
+/* line 110, ../sass/base.scss */
+body > header li {
+  height: 100%;
+}
+/* line 111, ../sass/base.scss */
+body > header p, body > header ul {
+  margin: 0;
+}
+/* line 114, ../sass/base.scss */
+body > header ul {
+  list-style: none;
+}
+/* line 117, ../sass/base.scss */
+body > header a:hover {
+  text-decoration: none;
+}
+/* line 118, ../sass/base.scss */
+body > header .nav-left, body > header .nav-right {
+  width: 50%;
+  float: left;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+}
+/* line 121, ../sass/base.scss */
+body > header .nav-right {
+  text-align: right;
+}
+/* line 125, ../sass/base.scss */
+body > header .darken-header {
+  background-color: #4D243D;
+  background-color: rgba(77, 36, 61, 0.7);
+}
+/* line 128, ../sass/base.scss */
+body > header .darken-header a {
+  color: white;
+}
+/* line 131, ../sass/base.scss */
+body .main-content {
+  margin-top: 48px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #bcbcbc;
+  min-height: 82vh;
+}
+/* line 12, D:/Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+body .main-content:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+/* line 139, ../sass/base.scss */
+body > footer {
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 5em;
+  background-color: #4D243D;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: white;
+}
+/* line 140, ../sass/base.scss */
+body > footer p {
+  margin: 0;
+  text-align: center;
+  padding-top: 2em;
+}
+/* line 12, D:/Ruby22/lib/ruby/gems/2.2.0/gems/susy-2.2.6/sass/susy/output/support/_clearfix.scss */
+body > footer:after {
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+/*****************************************************
+Views
+******************************************************/
+/* line 5, ../sass/main.scss */
+.post-list-item, .post-detail {
+  width: 87.5%;
+  float: left;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+  margin-left: 6.25%;
+  background-color: white;
+  background-color: rgba(250, 250, 250, 0.9);
+  margin-top: 1.5em;
+}
+/* line 13, ../sass/main.scss */
+.post-list-item header h4, .post-detail header h4 {
+  margin-bottom: 0.25em;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #4D243D;
+}
+/* line 16, ../sass/main.scss */
+.post-list-item header h4 a, .post-detail header h4 a {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #4D243D;
+  font-size: 1.25em;
+  opacity: 1;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+/* line 22, ../sass/main.scss */
+.post-list-item header h4 a:hover, .post-detail header h4 a:hover {
+  opacity: 0.7;
+}
+/* line 26, ../sass/main.scss */
+.post-list-item header h3, .post-detail header h3 {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: #0D0221;
+}
+/* line 28, ../sass/main.scss */
+.post-list-item .body, .post-detail .body {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #2B2E34;
+}
+/* line 32, ../sass/main.scss */
+.post-list-item footer, .post-detail footer {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #bcbcbc;
+  font-size: 0.75em;
+}
+/* line 36, ../sass/main.scss */
+.post-list-item header, .post-list-item .body, .post-list-item footer, .post-detail header, .post-detail .body, .post-detail footer {
+  width: 80%;
+  float: left;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+}
+
+/* line 41, ../sass/main.scss */
+.post-list-item:last-child {
+  margin-bottom: 1.5em;
+}
+
+/* line 44, ../sass/main.scss */
+.post-detail {
+  margin-bottom: 1.5em;
+}
+
+/* line 47, ../sass/main.scss */
+form {
+  width: 100%;
+  float: left;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  color: #2B2E34;
+  background-color: white;
+}
+@media (min-width: 900px) {
+  /* line 47, ../sass/main.scss */
+  form {
+    width: 87.5%;
+    float: left;
+    padding-left: 0.625%;
+    padding-right: 0.625%;
+    margin-left: 6.25%;
+  }
+}
+/* line 57, ../sass/main.scss */
+form p, form h3 {
+  width: 100%;
+  float: left;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+}
+/* line 59, ../sass/main.scss */
+form textarea, form input[type=text], form label, form .error, form #chars {
+  width: 100%;
+  float: left;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+}
+@media (min-width: 900px) {
+  /* line 59, ../sass/main.scss */
+  form textarea, form input[type=text], form label, form .error, form #chars {
+    width: 56.25%;
+    float: left;
+    padding-left: 0.625%;
+    padding-right: 0.625%;
+  }
+}
+/* line 65, ../sass/main.scss */
+form textarea, form input[type=text] {
+  padding: 6px;
+}
+/* line 68, ../sass/main.scss */
+form label {
+  padding-left: 0;
+  margin-bottom: 0.25em;
+}
+/* line 72, ../sass/main.scss */
+form textarea {
+  height: 10em;
+}
+/* line 75, ../sass/main.scss */
+form .error {
+  color: #ba0511;
+}
+/* line 78, ../sass/main.scss */
+form .submit {
+  font-family: "Lato", Helvetica, Arial, sans-serif;
+  font-weight: 700;
+  color: white;
+  background-color: #4D243D;
+  border: 1px solid #4D243D;
+  padding: 0.5em 1em;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+/* line 85, ../sass/main.scss */
+form .submit:hover {
+  background-color: white;
+  color: #4D243D;
+}
+
+/* line 91, ../sass/main.scss */
+.actions p {
+  width: 100%;
+  float: left;
+  padding-left: 0.625%;
+  padding-right: 0.625%;
+  text-align: left;
+}
+/* line 95, ../sass/main.scss */
+.actions a {
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  background-color: #4D243D;
+  border: 1px solid #4D243D;
+  color: white;
+  padding: 0.5em 1em;
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+/* line 99, ../sass/main.scss */
+.actions a:hover {
+  background-color: white;
+  color: #4D243D;
+}
+
+/*****************************************************
+
+******************************************************/

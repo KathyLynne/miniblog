@@ -1,0 +1,106 @@
+@import 'base';
+/*****************************************************
+Views
+******************************************************/
+.post-list-item, .post-detail{
+  @include span(14 of 16);
+  @include push(1);
+  background-color:$white;
+  background-color:$trans-white;
+  margin-top:1.5em;
+
+  header{
+    h4{
+      margin-bottom:0.25em;
+      @include font-bold($purple);
+      a{
+        @include font-bold($purple);
+        font-size:1.25em;
+        opacity:1;
+        @include transition-all(0.25s);
+      }
+      a:hover{
+        opacity:0.7;
+      }
+    }
+    h3{@include font-bold($dark-blue);}
+  }
+  .body{
+    @include font-light($deep-grey);
+
+  }
+  footer{
+    @include font-light($grey);
+    font-size:0.75em;
+  }
+  header, .body, footer{
+    @include span(80%);
+  }
+}
+
+.post-list-item:last-child{
+  margin-bottom:1.5em;
+}
+.post-detail{
+  margin-bottom:1.5em;
+}
+form{
+  @include span(full);
+  margin-top:5vh;
+  margin-bottom:5vh;
+  @include breakpoint($bp-medium){
+    @include span(14 of 16);
+    @include push(1);
+  }
+  @include font-light($deep-grey);
+  background-color:$white;
+  p, h3{@include span(full);}
+
+  textarea, input[type=text], label, .error, #chars{
+    @include span(full);
+    @include breakpoint($bp-medium){
+      @include span(9 of 16);
+    }
+  }
+  textarea, input[type=text]{
+    padding:6px;
+  }
+  label{
+    padding-left:0;
+    margin-bottom:0.25em;
+  }
+  textarea{
+    height:10em;
+  }
+  .error{
+    color:#ba0511;
+  }
+  .submit{
+    @include font-bold($white);
+    background-color:$purple;
+    border:1px solid $purple;
+    padding:0.5em 1em;
+    @include transition-all(0.25s);
+  }
+  .submit:hover{
+    background-color:$white;
+    color:$purple;
+  }
+}
+.actions{
+  p{
+    @include span(full);
+    text-align:left;
+  }
+  a{
+    @include transition-all(0.25s);
+    @include text-button-square($purple, 0.5em, 1em);
+  }
+  a:hover{
+    background-color:$white;
+    color:$purple;
+  }
+}
+/*****************************************************
+
+******************************************************/

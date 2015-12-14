@@ -1,0 +1,146 @@
+@import 'mixins';
+/** -- mobile first base layout-- **/
+// First, a couple quick general settings
+/*****************************************************
+    Multi Screen Font-sizing
+******************************************************/
+body {
+  font-size: 100%;
+  margin:0;
+}
+
+body, caption, th, td, input, textarea, select, option, legend, fieldset, h1, h2, h3, h4, h5, h6 {
+  font-size-adjust: 0.5;
+}
+p{
+    font-size: 1em; /* equivalent to 16px */
+    line-height: 1.25; /* equivalent to 20px */
+    @include breakpoint($bp-small){
+        font-size: 1em; /* equivalent to 16px */
+        line-height: 1.375; /* equivalent to 22px */
+    }
+}
+h1{
+    font-size: 2em; /* 2x body copy size = 32px */
+    line-height: 1.25; /* 45px / 36px */
+    @include breakpoint($bp-small){
+        font-size: 2.5em; /* 2.5x body copy size = 40px */
+        line-height: 1.125;
+    }
+    @include breakpoint($bp-medium){
+        font-size: 3em; /* 3x body copy size = 48px */
+        line-height: 1.05; /* keep to a multiple of the 20px line height and something more appropriate for display headings */
+    }
+}
+h2{
+    font-size: 1.625em; /* 1.625x body copy size = 26px */
+    line-height: 1.15384615; /* 30px / 26px */
+    @include breakpoint($bp-small){
+        font-size: 2em; /* 2x body copy size = 32px */
+        line-height: 1.25;
+    }
+    @include breakpoint($bp-medium){
+        font-size: 2.25em; /* 2.25x body copy size = 36px */
+        line-height: 1.25;
+    }
+}
+h3 {
+  font-size: 1.375em; /* 1.375x body copy size = 22px */
+  line-height: 1.13636364; /* 25px / 22px */
+  @include breakpoint($bp-small){
+      font-size: 1.5em; /* 1.5x body copy size = 24px */
+      line-height: 1.25;
+  }
+  @include breakpoint($bp-medium){
+      font-size: 1.75em; /* 1.75x body copy size = 28px */
+      line-height: 1.25;
+  }
+}
+h4 {
+  font-size: 1.125em; /* 1.125x body copy size = 18px */
+  line-height: 1.11111111;
+  @include breakpoint($bp-small){
+      line-height: 1.22222222; /* (22px / 18px */
+  }
+}
+blockquote {
+  font-size: 1.25em; /* 20px / 16px */
+  line-height: 1.25;  /* 25px / 20px */
+  @include breakpoint($bp-small){
+      font-size: 1.5em; /* 24px / 16px = */
+      line-height: 1.45833333; /* 35px / 24px */
+  }
+}
+
+/*********************************************************************
+    General Templating Sets, Header Footer, Main Content Outer Format
+*********************************************************************/
+
+.nav ul{ list-style: none; padding-left:0; }
+a{
+    text-decoration: none;
+    @include transition-all(0.5s);
+}
+
+body{
+    /*****************************************************
+     Nav- Main-Menu / Header
+    ******************************************************/
+    > header{
+        position:fixed;
+        top:0;
+        left:0;
+        right:0;
+        z-index: 1000;
+        @include container(100%);
+        height:48px;
+        background-color:transparent;
+        background-color: $trans-white;
+        @include font-bold($white);
+        a{
+            color:$purple;
+            padding-top:12px;
+            font-size:16px;
+            @include inline-block();
+            @include breakpoint($bp-medium){
+              padding-top:4px;
+              font-size:32px;
+            }
+        }
+        li{height:100%;}
+        p, ul{
+          margin:0;
+        }
+        ul{
+          list-style:none;
+        }
+        a:hover{ text-decoration: none; }
+        .nav-left, .nav-right{
+          @include span(8 of 16);
+        }
+        .nav-right{
+          text-align:right;
+        }
+
+        .darken-header{
+            background-color:$purple;
+            background-color:$trans-purple;
+            a{color:$white;}
+        }
+      }
+    .main-content{
+      margin-top:48px;
+      @include container(100%);
+      background-color:$grey;
+      min-height:82vh;
+
+    }
+
+    > footer{
+      p{margin:0; text-align:center;padding-top:2em}
+      @include container(100%);
+      height:5em;
+      background-color:$purple;
+      @include font-light($white);
+    }
+}
